@@ -1,0 +1,488 @@
+/* =========================================
+   ANIMATIONS
+   Pure motion: transitions, keyframes, AOS
+   No layout fixes — those live in their
+   respective CSS files.
+========================================= */
+
+/* ── Navbar scroll shadow ── */
+.navbar {
+  transition: box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* ── Nav link underline on hover ── */
+.nav-links > li > a {
+  position: relative;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background 0.2s ease;
+}
+.nav-links > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 11px;
+  right: 11px;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+.nav-links > li > a:hover::after,
+.nav-links > li.active > a::after {
+  transform: scaleX(1);
+}
+.nav-links > li > a:hover,
+.nav-links > li.active > a {
+  background: rgba(15,23,42,0.06);
+}
+
+/* ── Dropdown fade + slide ── */
+.dropdown {
+  display: block !important;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown li a {
+  transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+}
+.dropdown li a:hover {
+  background: rgba(15,23,42,0.06);
+  color: var(--color-heading);
+  padding-left: 24px;
+}
+
+/* ── Mobile nav + dropdown ── */
+@media (max-width: 1100px) {
+  .nav-links {
+    display: flex !important;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+  }
+  .nav-links.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+  .nav-links > li > a::after { display: none; }
+  .nav-links > li > a:hover { background: rgba(15,23,42,0.04); }
+  .dropdown {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .has-dropdown.open .dropdown { max-height: 400px; }
+  .nav-toggle { transition: transform 0.25s ease; }
+  .nav-toggle.open { transform: rotate(90deg); }
+}
+
+/* ── Nav logo ── */
+.nav-logo-img {
+  width: 80px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ── Buttons ── */
+.btn {
+  transition: background 0.22s ease, border-color 0.22s ease,
+              color 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Cards ── */
+.facility-card,
+.staff-card,
+.infra-card,
+.achievement-card,
+.testimonial-card,
+.lab-card,
+.notice-card {
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* ── Page banner entrance ── */
+.page-banner h1 { animation: fadeSlideUp 0.55s ease both; }
+.page-banner p  { animation: fadeSlideUp 0.55s ease 0.1s both; }
+.breadcrumb     { animation: fadeSlideUp 0.55s ease 0.18s both; }
+
+/* ── Hero content entrance ── */
+.hero-tag       { animation: fadeSlideUp 0.5s ease 0.1s both; }
+.hero-overlay h1{ animation: fadeSlideUp 0.55s ease 0.2s both; }
+.hero-overlay p { animation: fadeSlideUp 0.5s ease 0.32s both; }
+.notice-bar     { animation: fadeSlideUp 0.5s ease 0.4s both; }
+.hero-btns      { animation: fadeSlideUp 0.5s ease 0.48s both; }
+
+/* ── Footer links ── */
+.site-footer ul li a { transition: color 0.2s ease; }
+
+/* ── More link ── */
+.more-link {
+  transition: opacity 0.2s ease, letter-spacing 0.2s ease;
+}
+.more-link:hover { letter-spacing: 0.5px; }
+
+/* ── Topper cards ── */
+.topper-card { transition: transform 0.22s ease; }
+.topper-card:hover { transform: translateY(-4px); }
+.topper-photo { transition: box-shadow 0.22s ease; }
+.topper-card:hover .topper-photo {
+  box-shadow: 0 4px 16px rgba(15,23,42,0.2);
+}
+
+/* ── Gallery ── */
+.gallery-item .gal-overlay { display: none; }
+.gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+}
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40%       { transform: translateY(-6px) scale(1.02); }
+  70%       { transform: translateY(-3px) scale(1.01); }
+}
+.gentle-bounce { animation: gentleBounce 0.5s ease; }
+
+/* ── Sidebar links ── */
+.sidebar-link {
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+.sidebar-link:hover { padding-left: 20px; }
+
+/* ── SpinKit: Double Bounce ── */
+.spinner {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  animation: sk-rotate 2.0s infinite linear;
+}
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: var(--color-heading);
+  border-radius: 100%;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.dot2 {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1.0s;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes sk-rotate {
+  100% { transform: rotate(360deg); }
+}
+@keyframes sk-bounce {
+  0%, 100% { transform: scale(0.0); }
+  50%       { transform: scale(1.0); }
+}
+
+
+
+
+/* ── Topper photo halo on hover ── */
+.topper-photo {
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.topper-card:hover .topper-photo {
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.9),
+    0 0 16px 6px rgba(99,132,255,0.4),
+    0 0 32px 12px rgba(99,132,255,0.15);
+  transform: scale(1.08);
+}
+
+/* ── Testimonial card halo + pop on hover ── */
+.testimonial-card {
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.testimonial-card:hover {
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.9),
+    0 0 16px 6px rgba(99,132,255,0.4),
+    0 0 32px 12px rgba(99,132,255,0.15);
+  transform: translateY(-6px) scale(1.02);
+}
+
+
+/* ── Slider arrows ── */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--color-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+.slider-arrow:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+.slider-prev { left: 20px; }
+.slider-next { right: 20px; }
+
+/* ── Ken Burns on hero slides ── */
+.slide img {
+  animation: kenBurns 9s ease-in-out infinite alternate;
+}
+@keyframes kenBurns {
+  from { transform: scale(1);    transform-origin: center center; }
+  to   { transform: scale(1.06); transform-origin: 60% 40%; }
+}
+
+/* ── Page fade-in ── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: pageFadeIn 0.4s ease both;
+}
+
+/* ── Scroll progress bar ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-accent), rgba(99,132,255,0.8));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Back to top button ── */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--color-heading);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  z-index: 999;
+}
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background: rgba(99,132,255,0.9);
+  transform: translateY(-3px);
+}
+
+/* ── Counter animation ── */
+.count-up {
+  display: inline-block;
+}
+
+/* ── Topper % shimmer placeholder ── */
+.topper-photo-skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* ── Mobile fixes ── */
+@media (max-width: 600px) {
+
+  /* Hero tag — remove pill on mobile */
+  .hero-tag {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: rgba(255,255,255,0.75);
+    font-size: 10px;
+  }
+
+  /* Hero buttons — stack but don't go full width */
+  .hero-btns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-btns .btn {
+    width: auto;
+    display: inline-block;
+  }
+
+  /* Slider arrows — smaller on mobile */
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .slider-prev { left: 8px; }
+  .slider-next { right: 8px; }
+
+  /* About placeholder — hide on mobile if empty */
+  .about-placeholder {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Hero overlay padding tighter */
+  .hero-overlay {
+    padding: 0 16px;
+  }
+  .hero-overlay h1 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+
+/* ── Mobile homepage fixes ── */
+@media (max-width: 600px) {
+
+  /* Hero buttons — side by side, not full width */
+  .hero-btns {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero-btns .btn {
+    flex: 0 0 auto;
+    width: auto !important;
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  /* Facility card — prevent title wrapping */
+  .facility-card {
+    padding: 16px;
+    gap: 12px;
+  }
+  .facility-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 18px;
+  }
+  .facility-card h4 {
+    font-size: 15px;
+  }
+  .facility-card p {
+    font-size: 13px;
+  }
+
+  /* Principal photo on homepage — natural aspect ratio */
+  .principal-wrap .principal-photo {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  /* Footer — tighten spacing */
+  .site-footer ul {
+    gap: 4px;
+  }
+  .site-footer {
+    padding: 36px var(--spacing-sm) 0;
+  }
+  .footer-grid {
+    gap: 24px;
+  }
+  .site-footer h4 {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* ── Hamburger menu — right aligned ── */
+@media (max-width: 1100px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .nav-toggle {
+    margin-left: auto;
+    order: 3;
+  }
+}
+
+
+/* ── Hide slider arrows on mobile ── */
+@media (max-width: 600px) {
+  .slider-arrow { display: none; }
+}
+
+
+/* ── Principal photo on mobile ── */
+@media (max-width: 900px) {
+  .principal-wrap .principal-photo {
+    max-width: 260px;
+    margin: 0 auto 24px;
+  }
+  .principal-wrap .principal-photo img {
+    aspect-ratio: 1 / 1;
+    object-position: top center;
+    object-fit: cover;
+  }
+}

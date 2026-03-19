@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest events, announcements and celebrations at Gurukul Group of Education Wing.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gurukulgroupofeducationwing.netlify.app/pages/events.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Events & Celebrations | Gurukul Group of Education Wing">
+  <meta property="og:description" content="Latest events, announcements and celebrations at Gurukul Group of Education Wing.">
+  <meta property="og:image" content="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <meta property="og:url" content="https://gurukulgroupofeducationwing.netlify.app/pages/events.html">
+  <meta property="og:site_name" content="Gurukul Group of Education Wing">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Events & Celebrations | Gurukul Group of Education Wing">
+  <meta name="twitter:description" content="Latest events, announcements and celebrations at Gurukul Group of Education Wing.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <title>Events &amp; Celebrations - Gurukul Group of Education Wing</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .events-layout {
+      max-width: 800px;
+    }
+    .notice-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid #0f172a;
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .notice-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .notice-date { font-size: 12px; font-weight: 700; color: var(--color-heading); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .notice-card h4 { font-family: var(--font-heading); font-size: 20px; color: var(--color-heading); margin-bottom: 8px; }
+    .notice-card p { font-size: 14px; color: var(--color-muted); line-height: 1.7; }
+    .read-more { font-size: 13px; font-weight: 700; color: var(--color-heading); margin-top: 10px; display: inline-block; }
+.events-details-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+    .events-details-modal.open { display: flex; }
+    .modal-box { background: var(--color-white); border-radius: var(--radius-md); padding: 40px; max-width: 600px; width: 100%; position: relative; box-shadow: var(--shadow-lg); }
+    .modal-close { position: absolute; top: 16px; right: 20px; font-size: 28px; cursor: pointer; color: var(--color-muted); line-height: 1; }
+    .modal-close:hover { color: var(--color-heading); }
+    .modal-badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 700; background: var(--color-accent-light); color: var(--color-heading); margin-bottom: 14px; }
+    .modal-box h2 { font-family: var(--font-heading); font-size: 28px; color: var(--color-heading); margin-bottom: 10px; }
+    .modal-meta { font-size: 13px; color: var(--color-muted); margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border); }
+    .modal-box p { font-size: 15px; line-height: 1.85; color: var(--color-text); margin-bottom: 12px; }
+
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <div class="page-banner">
+    <h1>Events &amp; Celebrations</h1>
+    <p>School announcements, notices, and upcoming events at Gurukul Group of Education Wing.</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Events &amp; Celebrations</div>
+  </div>
+
+  <section id="noticeboard">
+    <div class="container">
+      <div class="events-layout">
+
+        <div>
+          <h2 class="section-title" data-aos="fade-up">Notice Board</h2>
+          <div class="divider"></div>
+          <!-- UPDATE: Add new notices here as they are announced by the school. -->
+
+          <div class="notice-card" data-aos="fade-up" data-aos-delay="0" onclick="openModal('annual-week')">
+            <div class="notice-date">1st &ndash; 8th December 2023</div>
+            <h4>Annual Week 2023</h4>
+            <p>The Annual Week celebrations will be held from 1st to 8th December 2023. Students from all classes will participate in cultural, academic, and sports competitions across the week.</p>
+            <span class="read-more">Read More &rarr;</span>
+          </div>
+
+          <div class="notice-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('annual-day')">
+            <div class="notice-date">10th December 2023</div>
+            <h4>Annual Day Function 2023</h4>
+            <p>The Annual Day Function will be held on 10th December 2023. The programme includes prize distribution, cultural performances, and addresses by the Principal and Founder-Director. All parents are cordially invited.</p>
+            <span class="read-more">Read More &rarr;</span>
+          </div>
+
+          <div class="notice-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('admissions-2025')">
+            <div class="notice-date">Admissions Open &mdash; 2025-26</div>
+            <h4>Admissions Open for 2025-26 Session</h4>
+            <p>Admissions are now open for Classes LKG to XI for the 2025-26 academic session. Collect or download the admission form and submit it with the required documents.</p>
+            <span class="read-more">Read More &rarr;</span>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div class="events-details-modal" id="modal-annual-week">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeModal('annual-week')">&times;</span>
+      <span class="modal-badge">Annual Event</span>
+      <h2>Annual Week 2023</h2>
+      <div class="modal-meta">&#128197; 1st &ndash; 8th December 2023 &nbsp;&bull;&nbsp; Gurukul Campus, Mangaldoi</div>
+      <p>The Annual Week at Gurukul Group of Educational Wing is a week-long celebration of student talent, hard work, and academic achievement. Events include inter-class competitions in drawing, essay writing, quiz, debate, sports, music, and drama.</p>
+      <p>All students from Classes LKG to XII are encouraged to participate. Prizes will be awarded at the Annual Day Function on 10th December 2023.</p>
+      <p>Parents are welcome to visit the campus during this week. Contact the school office for the day-wise schedule.</p>
+    </div>
+  </div>
+
+  <div class="events-details-modal" id="modal-annual-day">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeModal('annual-day')">&times;</span>
+      <span class="modal-badge">Annual Function</span>
+      <h2>Annual Day Function 2023</h2>
+      <div class="modal-meta">&#128197; 10th December 2023 &nbsp;&bull;&nbsp; Gurukul Campus, Mangaldoi</div>
+      <p>The Annual Day Function is the highlight of the school year. The programme includes prize distribution for academic and co-curricular achievers, cultural performances by students of all age groups, and special addresses by the Principal and Founder-Director.</p>
+      <p>All parents, guardians, and well-wishers of the school are cordially invited to attend.</p>
+      <p>Venue: Gurukul Group of Educational Wing, NA-Howly, Barathiabari, Mangaldoi, Assam &mdash; 784529.</p>
+    </div>
+  </div>
+
+  <div class="events-details-modal" id="modal-admissions-2025">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeModal('admissions-2025')">&times;</span>
+      <span class="modal-badge">Admissions</span>
+      <h2>Admissions Open for 2025-26</h2>
+      <div class="modal-meta">&#128197; Session 2025-26 &nbsp;&bull;&nbsp; Classes LKG to XI</div>
+      <p>Gurukul Group of Educational Wing is now accepting admissions for the 2025-26 academic session. Classes available: LKG to XI (Day Scholar and Residential).</p>
+      <p>Collect the admission form from the school office or download it from this website. Submit the filled form with two passport-size photographs and required documents.</p>
+      <p>Contact: <a href="tel:+919365244195" style="color:var(--color-heading);">+91 9365244195</a> for more information.</p>
+      <div style="margin-top:20px;">
+        <a href="procedure.html" class="btn btn-primary">View Admission Procedure</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/layout.js"></script>
+  <script src="../js/interactions.js"></script>
+  <script>
+    function openModal(id) {
+      document.getElementById('modal-' + id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById('modal-' + id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.events-details-modal').forEach(modal => {
+      modal.addEventListener('click', function(e) {
+        if (e.target === this) { this.classList.remove('open'); document.body.style.overflow = ''; }
+      });
+    });
+  </script>
+</body>
+</html>

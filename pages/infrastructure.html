@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="State-of-the-art infrastructure at Gurukul Group of Education Wing including labs, library and sports facilities.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gurukulgroupofeducationwing.netlify.app/pages/infrastructure.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Infrastructure | Gurukul Group of Education Wing">
+  <meta property="og:description" content="State-of-the-art infrastructure at Gurukul Group of Education Wing including labs, library and sports facilities.">
+  <meta property="og:image" content="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <meta property="og:url" content="https://gurukulgroupofeducationwing.netlify.app/pages/infrastructure.html">
+  <meta property="og:site_name" content="Gurukul Group of Education Wing">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Infrastructure | Gurukul Group of Education Wing">
+  <meta name="twitter:description" content="State-of-the-art infrastructure at Gurukul Group of Education Wing including labs, library and sports facilities.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png">
+  <title>Infrastructure - Gurukul Group of Education Wing</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .infra-section { padding: var(--spacing-xxl) 0; border-bottom: 1px solid var(--color-border); }
+    .infra-section:last-of-type { border-bottom: none; }
+    .infra-section-alt { background: var(--color-bg-alt); }
+
+    .infra-jumpto { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 24px; position: sticky; top: 80px; }
+    .infra-jumpto h4 { font-family: var(--font-heading); font-size: 18px; color: var(--color-heading); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--color-border); }
+    .infra-jumpto ul { display: flex; flex-direction: column; gap: 8px; }
+    .infra-jumpto ul li a { font-size: 14px; font-weight: 600; color: var(--color-heading); transition: opacity var(--transition); }
+    .infra-jumpto ul li a:hover { opacity: 0.7; }
+
+    .infra-sub-block { background: var(--color-white); border: 1px solid var(--color-border); border-left: 4px solid #0f172a; border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 16px; }
+    .infra-sub-block h3 { font-family: var(--font-heading); font-size: 20px; color: var(--color-heading); margin-bottom: 8px; }
+    .infra-sub-block p { font-size: 14px; color: var(--color-muted); line-height: 1.75; }
+
+    .lab-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; transition: box-shadow var(--transition), transform var(--transition); }
+    .lab-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .lab-card-img { width: 100%; height: 180px; object-fit: cover; background: var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .lab-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lab-card-body { padding: 20px; }
+    .lab-card-body h3 { font-family: var(--font-heading); font-size: 19px; color: var(--color-heading); margin-bottom: 8px; }
+    .lab-card-body p { font-size: 13px; color: var(--color-muted); line-height: 1.75; }
+
+    .lab-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-md); }
+
+    .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center; }
+    .split-section.reverse { direction: rtl; }
+    .split-section.reverse > * { direction: ltr; }
+    .split-img { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md); background: var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .split-img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); display: block; }
+    .split-text h2 { font-family: var(--font-heading); font-size: 32px; color: var(--color-heading); margin-bottom: 14px; }
+    .split-text p { font-size: 15px; color: var(--color-muted); line-height: 1.85; }
+
+    .sports-img-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-top: var(--spacing-lg); }
+    .sports-img-row .sport-img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius-md); background: var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; }
+    .sports-img-row .sport-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .yt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-top: var(--spacing-lg); }
+    .yt-grid iframe { width: 100%; height: 280px; border-radius: var(--radius-md); border: none; }
+
+    .campus-layout { display: grid; grid-template-columns: 1fr 260px; gap: var(--spacing-xl); align-items: start; }
+
+    @media (max-width: 900px) {
+      .lab-grid { grid-template-columns: 1fr 1fr; }
+      .split-section { grid-template-columns: 1fr; }
+      .split-section.reverse { direction: ltr; }
+      .campus-layout { grid-template-columns: 1fr; }
+      .infra-jumpto { position: static; }
+      .yt-grid { grid-template-columns: 1fr; }
+      .sports-img-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .lab-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <div class="page-banner">
+    <h1>Infrastructure</h1>
+    <p>Modern facilities built to support world-class learning.</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Infrastructure</div>
+  </div>
+
+  <!-- Our Campus -->
+  <section class="infra-section">
+    <div class="container">
+      <div class="campus-layout">
+        <div>
+          <h2 class="section-title" data-aos="fade-up">Our Campus</h2>
+          <div class="divider"></div>
+          <p style="font-size:15px;line-height:1.85;color:var(--color-muted);margin-bottom:14px;">
+            Gurukul Group of Educational Wing is a co-educational school affiliated to Central Board of Secondary Education, Delhi vide affiliation No. 230192. The school offers a choice between Residential and Day Scholastic Programmes. Established to make children well-rounded and self-dependent individuals.
+          </p>
+          <p style="font-size:15px;line-height:1.85;color:var(--color-muted);margin-bottom:var(--spacing-lg);">
+            The school has been constructed on a sprawling campus with splendid infrastructural facilities in a tranquil and pollution-free environment.
+          </p>
+          <div class="yt-grid">
+            <div style="position:relative;min-height:360px;">
+          <div style="position:absolute;inset:0;background:#f8fafc;display:flex;align-items:center;justify-content:center;z-index:2;">
+            <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
+          </div>
+          <iframe onload="this.previousElementSibling.style.display='none'" src="https://www.youtube.com/embed/xS1Lhh0uIwM" title="Gurukul Campus Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            <div style="position:relative;min-height:360px;">
+          <div style="position:absolute;inset:0;background:#f8fafc;display:flex;align-items:center;justify-content:center;z-index:2;">
+            <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
+          </div>
+          <iframe onload="this.previousElementSibling.style.display='none'" src="https://www.youtube.com/embed/Z6GzWaMzCdg" title="Gurukul Campus Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+          </div>
+        </div>
+        <div class="infra-jumpto">
+          <h4>Jump to</h4>
+          <ul>
+            <li><a href="#atheletics-sec">Athletics</a></li>
+            <li><a href="#laboratory-sec">Laboratories</a></li>
+            <li><a href="#computerlab-sec">Computer Lab</a></li>
+            <li><a href="#library-sec">Library</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Athletics -->
+  <section id="atheletics-sec" class="infra-section infra-section-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Athletics</h2>
+      <div class="divider"></div>
+      <p style="font-size:15px;line-height:1.85;color:var(--color-muted);max-width:720px;margin-bottom:var(--spacing-lg);">
+        Gurukul Group of Educational Wing recognizes the need and importance of games and sports activities in a student's life. The school provides a variety of games and sports facilities to develop a sound mind and a fit body for all its students.
+      </p>
+      <div class="infra-sub-block">
+        <h3>Sports</h3>
+        <p>We have lush green grounds for cricket, football, Volleyball, Basketball, badminton court, chess room, and Karate.</p>
+      </div>
+      <div class="infra-sub-block">
+        <h3>Yoga</h3>
+        <p>We have lush green grounds for cricket, football, Volleyball, Basketball, badminton court, chess room, and Karate.</p>
+      </div>
+      <div class="sports-img-row">
+        <div class="sport-img">
+          <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926363/sports_hzvo5q.jpg" alt="Sports at Gurukul" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+        <div class="sport-img">
+          <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926378/yoga_ycrytu.jpg" alt="Yoga at Gurukul" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Laboratories -->
+  <section id="laboratory-sec" class="infra-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Laboratories</h2>
+      <div class="divider"></div>
+      <p style="font-size:15px;line-height:1.85;color:var(--color-muted);max-width:800px;margin-bottom:var(--spacing-lg);">
+        Students of middle and secondary perform experiments in the Science Activity Rooms where they learn science by the method of "Learning by Doing". Learning is further enhanced by hands-on activities related to everyday science. Students also get an opportunity to apply their innovative ideas and enjoy the unexplored vistas of science. This activity lab is equipped to cater to 45 students at a time. The lab is well ventilated with a lot of natural light.
+      </p>
+      <div class="lab-grid">
+        <div class="lab-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="lab-card-img">
+            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926386/laboratories_bskfmd.jpg" alt="Maths Activity Lab" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+          </div>
+          <div class="lab-card-body">
+            <h3>Maths Activity Labs</h3>
+            <p>Separate Mathematics labs are provided to students of primary, middle and secondary to perform group activities. Math lab helps the student to visualize the problem using 3D modeling and paper folding activities.</p>
+          </div>
+        </div>
+        <div class="lab-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="lab-card-img">
+            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926402/physicslabitems_wbfbr0.jpg" alt="Physics Lab" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+          </div>
+          <div class="lab-card-body">
+            <h3>Physics Lab</h3>
+            <p>GGEW takes pride in the fact that it has spacious and well equipped Physics Laboratory.</p>
+          </div>
+        </div>
+        <div class="lab-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="lab-card-img">
+            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926412/biolab_sg9gwx.jpg" alt="Biology Lab" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+          </div>
+          <div class="lab-card-body">
+            <h3>Biology Lab</h3>
+            <p>The Biology Laboratory is well equipped with all instruments like microscopes, slides, stains, forceps, needle etc. that are required for performing experiments.</p>
+          </div>
+        </div>
+        <div class="lab-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="lab-card-img">
+            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926420/chemlab_mvcqk0.jpg" alt="Chemistry Lab" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+          </div>
+          <div class="lab-card-body">
+            <h3>Chemistry Lab</h3>
+            <p>GGEW has a very spacious Chemistry Lab. The lab has racks containing all reagents and chemicals used during the experiments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Computer Lab -->
+  <section id="computerlab-sec" class="infra-section infra-section-alt">
+    <div class="container">
+      <div class="split-section">
+        <div class="split-text">
+          <h2>Computer Lab</h2>
+          <p>School offers well equipped Computer labs. Students use the Computer lab resources to learn the use of different kinds of software to enhance their knowledge and showcase their creativity.</p>
+        </div>
+        <div class="split-img">
+          <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926435/computerlab_qer4e5.jpg" alt="Computer Lab" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);display:block;" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Library -->
+  <section id="library-sec" class="infra-section">
+    <div class="container">
+      <div class="split-section reverse">
+        <div class="split-text">
+          <h2>Library</h2>
+          <p>School offers well equipped library resources. Students use the library to learn and enhance their knowledge and showcase their creativity.</p>
+        </div>
+        <div class="split-img">
+          <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926446/libraries_smsz4c.jpg" alt="Library" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);display:block;" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/layout.js"></script>
+  <script src="../js/interactions.js"></script>
+</body>
+</html>

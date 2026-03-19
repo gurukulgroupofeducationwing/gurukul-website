@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+}
+
+.slides-container {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.slide-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d1f0e 0%, #1a3a1c 50%, #0d2d2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.25);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 20, 10, 0.85) 30%,
+    rgba(10, 20, 10, 0.35) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 88px;
+  color: var(--color-white);
+  z-index: 10;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.hero-overlay h1 {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 580px;
+  margin-bottom: 12px;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  opacity: 0.88;
+  margin-bottom: var(--spacing-md);
+  max-width: 460px;
+}
+
+.notice-bar {
+  background: rgba(255,255,255,0.08);
+  border-left: 3px solid var(--color-accent);
+  padding: 10px 16px;
+  font-size: 13px;
+  max-width: 460px;
+  margin-bottom: var(--spacing-md);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.slider-dot.active {
+  background: var(--color-accent);
+  transform: scale(1.25);
+}
+
+@media (max-width: 900px) {
+  .hero { height: 460px; }
+  .hero-overlay { padding: 0 var(--spacing-md); }
+  .hero-overlay h1 { font-size: 34px; }
+}
