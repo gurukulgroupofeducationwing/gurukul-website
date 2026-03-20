@@ -92,3 +92,11 @@
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .footer-brand { grid-column: 1 / -1; }
 }
+
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+  .footer-brand { grid-column: 1; }
+  .site-footer h4 { margin-bottom: 6px; padding-bottom: 4px; font-size: 15px; }
+  .site-footer ul { gap: 2px; }
+  .site-footer { padding-top: 28px; }
+}
