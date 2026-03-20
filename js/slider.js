@@ -75,17 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     timer = setInterval(() => goTo((current + 1) % slides.length), 4500);
   }
 
-  try {
-    const res = await fetch('/.netlify/functions/hero');
-    const images = await res.json();
-    if (images && images.length) {
-      buildSlider(images);
-    } else {
-      fallback();
-    }
-  } catch (e) {
-    fallback();
-  }
+  fallback();
 
   function fallback() {
     slides = hero.querySelectorAll('.slide');
