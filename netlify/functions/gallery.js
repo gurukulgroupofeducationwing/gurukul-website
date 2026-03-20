@@ -1,9 +1,8 @@
 const https = require('https');
 
-function cloudinaryRequest(cloudName, apiKey, apiSecret, prefix) {
+function cloudinaryRequest(cloudName, apiKey, apiSecret, path) {
   return new Promise((resolve, reject) => {
     const auth = Buffer.from(`${apiKey}:${apiSecret}`).toString('base64');
-    const path = `/v1_1/${cloudName}/resources/image?type=upload&prefix=${prefix}&max_results=100`;
     const options = {
       hostname: 'api.cloudinary.com',
       path,
@@ -33,29 +32,27 @@ exports.handler = async () => {
   }
 
   const categories = [
-    { prefix: 'gurukul/gallery/annualday/', cat: 'annualday', label: 'Annual Day 2022-23' },
-    { prefix: 'gurukul/gallery/events/',    cat: 'events',    label: 'Events' },
-    { prefix: 'gurukul/gallery/sports/',    cat: 'sports',    label: 'Sports' },
-    { prefix: 'gurukul/gallery/campus/',    cat: 'campus',    label: 'Campus' },
-    { prefix: 'gurukul/gallery/',           cat: 'general',   label: 'General' },
+    { tag: 'gallery-annualday', cat: 'annualday', label: 'Annual Day 2022-23' },
+    { tag: 'gallery-events',    cat: 'events',    label: 'Events' },
+    { tag: 'gallery-sports',    cat: 'sports',    label: 'Sports' },
+    { tag: 'gallery-campus',    cat: 'campus',    label: 'Campus' },
   ];
 
   const results = [];
   const seen = new Set();
 
-  for (const { prefix, cat, label } of categories) {
+  for (const { tag, cat, label } of categories) {
     try {
-      const data = await cloudinaryRequest(cloudName, apiKey, apiSecret, prefix);
+      const path = `/v1_1/${cloudName}/resources/image/tags/${encodeURIComponent(tag)}?max_results=100`;
+      const data = await cloudinaryRequest(cloudName, apiKey, apiSecret, path);
       (data.resources || []).forEach(r => {
         if (!seen.has(r.public_id)) {
           seen.add(r.public_id);
-          const subfolders = ['annualday', 'events', 'sports', 'campus'];
-          const actualCat = subfolders.find(s => r.public_id.includes(`gallery/${s}/`)) || cat;
-          results.push({ url: r.secure_url, public_id: r.public_id, cat: actualCat, label });
+          results.push({ url: r.secure_url, public_id: r.public_id, cat, label });
         }
       });
     } catch (e) {
-      console.error(`Failed fetching ${prefix}:`, e.message);
+      console.error(`Failed fetching tag ${tag}:`, e.message);
     }
   }
 

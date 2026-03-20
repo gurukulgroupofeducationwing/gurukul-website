@@ -75,8 +75,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     timer = setInterval(() => goTo((current + 1) % slides.length), 4500);
   }
 
-  fallback();
-
   function fallback() {
     slides = hero.querySelectorAll('.slide');
     if (!slides.length) return;
@@ -91,5 +89,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     addArrows();
     addSwipe();
     resetTimer();
+  }
+
+  try {
+    const res = await fetch('/.netlify/functions/hero');
+    if (!res.ok) throw new Error('Non-200 response');
+    const images = await res.json();
+    if (images && images.length) {
+      buildSlider(images);
+    } else {
+      fallback();
+    }
+  } catch (e) {
+    console.warn('Hero function failed, using fallback:', e.message);
+    fallback();
   }
 });
