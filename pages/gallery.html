@@ -135,13 +135,7 @@
 
   <section>
       <div class="container">
-        <div class="gallery-filters" data-aos="fade-up">
-          <button class="filter-btn active" onclick="filterGallery(this, 'all')">All</button>
-          <button class="filter-btn" onclick="filterGallery(this, 'annualday')">Annual Day 2022-23</button>
-          <button class="filter-btn" onclick="filterGallery(this, 'events')">Events</button>
-          <button class="filter-btn" onclick="filterGallery(this, 'sports')">Sports</button>
-          <button class="filter-btn" onclick="filterGallery(this, 'campus')">Campus</button>
-        </div>
+        <div class="gallery-filters" id="galleryFilters" data-aos="fade-up"></div>
         <div class="gallery-grid" id="galleryGrid">
           <div id="gallery-loading">Loading photos...</div>
         </div>
@@ -185,6 +179,28 @@
       return div;
     }
 
+    function buildFilters(images) {
+      const filters = document.getElementById('galleryFilters');
+      const seen = new Map();
+      images.forEach(img => {
+        if (img.cat && !seen.has(img.cat)) seen.set(img.cat, img.label || img.cat);
+      });
+
+      const allBtn = document.createElement('button');
+      allBtn.className = 'filter-btn active';
+      allBtn.textContent = 'All';
+      allBtn.addEventListener('click', () => filterGallery(allBtn, 'all'));
+      filters.appendChild(allBtn);
+
+      seen.forEach((label, cat) => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.textContent = label;
+        btn.addEventListener('click', () => filterGallery(btn, cat));
+        filters.appendChild(btn);
+      });
+    }
+
     async function loadGallery() {
       const grid = document.getElementById('galleryGrid');
       try {
@@ -193,6 +209,7 @@
         const images = await res.json();
         grid.innerHTML = '';
         if (images && images.length) {
+          buildFilters(images);
           images.forEach(img => {
             const cat = img.cat || 'general';
             const alt = img.label || 'Gurukul Gallery';
