@@ -486,3 +486,9 @@ body {
     object-fit: cover;
   }
 }
+
+
+/* ── Hide topbar on mobile ── */
+@media (max-width: 600px) {
+  .topbar { display: none; }
+}
