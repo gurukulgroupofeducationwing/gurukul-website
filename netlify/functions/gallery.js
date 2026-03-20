@@ -3,7 +3,7 @@ const https = require('https');
 function cloudinaryRequest(cloudName, apiKey, apiSecret, prefix) {
   return new Promise((resolve, reject) => {
     const auth = Buffer.from(`${apiKey}:${apiSecret}`).toString('base64');
-    const path = `/v1_1/${cloudName}/resources/image?type=upload&prefix=${prefix}&max_results=100`;
+    const path = `/v1_1/${cloudName}/resources/image?type=upload&prefix=${encodeURIComponent(prefix)}&max_results=100`;
     const options = {
       hostname: 'api.cloudinary.com',
       path,
@@ -37,7 +37,6 @@ exports.handler = async () => {
     { prefix: 'gurukul/gallery/events/',    cat: 'events',    label: 'Events' },
     { prefix: 'gurukul/gallery/sports/',    cat: 'sports',    label: 'Sports' },
     { prefix: 'gurukul/gallery/campus/',    cat: 'campus',    label: 'Campus' },
-    { prefix: 'gurukul/gallery/',           cat: 'general',   label: 'General' },
   ];
 
   const results = [];
@@ -49,9 +48,7 @@ exports.handler = async () => {
       (data.resources || []).forEach(r => {
         if (!seen.has(r.public_id)) {
           seen.add(r.public_id);
-          const subfolders = ['annualday', 'events', 'sports', 'campus'];
-          const actualCat = subfolders.find(s => r.public_id.includes(`gallery/${s}/`)) || cat;
-          results.push({ url: r.secure_url, public_id: r.public_id, cat: actualCat, label });
+          results.push({ url: r.secure_url, public_id: r.public_id, cat, label });
         }
       });
     } catch (e) {

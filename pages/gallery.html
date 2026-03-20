@@ -38,7 +38,6 @@
     }
     .gentle-bounce { animation: gentleBounce 0.5s ease; }
 
-    /* Lightbox */
     #lightbox {
       display: none;
       position: fixed;
@@ -114,6 +113,14 @@
       transition: background 0.2s, transform 0.2s;
     }
     .lb-dot.active { background: #fff; transform: scale(1.3); }
+
+    #gallery-loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 0;
+      color: var(--color-muted);
+      font-family: 'Nunito', sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -136,323 +143,11 @@
           <button class="filter-btn" onclick="filterGallery(this, 'campus')">Campus</button>
         </div>
         <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996600/gurukul/annual%20day%2022-23/320559262_686534859723217_1202588319570989780_n_yro9ks.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996600/gurukul/annual%20day%2022-23/320443052_823841272036818_5348663827431612302_n_y8sou9.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996600/gurukul/annual%20day%2022-23/320274669_5154890081279113_1870422072081869895_n_opw36i.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996600/gurukul/annual%20day%2022-23/320933261_1295485454354182_8634754613841213729_n_yxtzhj.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996600/gurukul/annual%20day%2022-23/320694183_5768723819879817_2722672393492552768_n_vjkgu8.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320378348_889895425341227_2207355818422927836_n_aiwyd9.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320766792_3025961734372096_3815229438331209684_n_x7ycwc.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320819396_1003655600475934_1523819978700135324_n_zkggva.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320562412_677998964113857_1462106803551549634_n_folbks.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320728451_1333618314073564_8941264738793842874_n_udd3nd.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/319729483_1808030379570671_8164970800489319362_n_jbcjv8.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320075330_518154636929184_1822554983112385745_n_ztpsxo.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320698360_689385592812016_5694098737924098421_n_el8lfy.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320212798_474316794785676_7935323957723332841_n_ip4zkk.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996599/gurukul/annual%20day%2022-23/320743081_856703712305977_9047804523845030779_n_sc8nbu.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996597/gurukul/annual%20day%2022-23/320691716_660919512476237_1058115201519476356_n_xikqtd.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996598/gurukul/annual%20day%2022-23/320709790_825213952039973_245988699067263799_n_kpwyvv.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996598/gurukul/annual%20day%2022-23/320410407_701150534915065_3952782130309275383_n_iyt3f6.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996598/gurukul/annual%20day%2022-23/320265235_855985992381385_6096539664081696224_n_zmzlne.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996597/gurukul/annual%20day%2022-23/320447891_540139528022017_5961710052113965276_n_egcu4z.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996597/gurukul/annual%20day%2022-23/320444081_670660401397032_6672830741023371619_n_uepy8p.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672996597/gurukul/annual%20day%2022-23/320383089_524495669605498_5010522661448928819_n_as2i6h.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997713/gurukul/annual%20day%2022-23/320764868_1258519004709721_1216194572544851073_n_fjaugo.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997713/gurukul/annual%20day%2022-23/320567470_839945713879681_5695204885911194873_n_rionrh.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997713/gurukul/annual%20day%2022-23/320743081_856703712305977_9047804523845030779_n_pstfkl.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997712/gurukul/annual%20day%2022-23/320939118_917197896320829_5413228705354113457_n_e10lgl.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997712/gurukul/annual%20day%2022-23/319279049_876553286804407_1134803563494000727_n_x3i4iv.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="annualday">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1672997712/gurukul/annual%20day%2022-23/319198740_880603143122873_9065863911290292844_n_jasun0.jpg" alt="Annual Day 2022-23" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_2_fmlfav.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_3_g8sahu.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_4_yrgcps.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_5_juroch.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240669/gurukul/nov2023_6_qtducp.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_7_g3vfiv.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="events">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/gwzzznuget/image/upload/v1702240668/gurukul/nov2023_8_szn0vg.jpg" alt="November 2023" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="180" data-cat="sports">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926363/sports_hzvo5q.jpg" alt="Sports" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0" data-cat="sports">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926378/yoga_ycrytu.jpg" alt="Yoga" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="60" data-cat="campus">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926435/computerlab_qer4e5.jpg" alt="Computer Lab" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="120" data-cat="campus">
-          <div style="position:relative;width:100%;height:100%;">
-            <div style="position:absolute;inset:0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;z-index:2;">
-              <div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>
-            </div>
-            <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926446/libraries_smsz4c.jpg" alt="Library" loading="lazy" onload="this.previousElementSibling.style.display='none'" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;">
-          </div>
-        </div>
+          <div id="gallery-loading">Loading photos...</div>
         </div>
       </div>
     </section>
 
-  <!-- Lightbox -->
   <div id="lightbox">
     <span id="lightbox-close">&times;</span>
     <span class="lb-arrow" id="lb-prev">&#8592;</span>
@@ -494,6 +189,7 @@
       const grid = document.getElementById('galleryGrid');
       try {
         const res = await fetch('/.netlify/functions/gallery');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         const images = await res.json();
         grid.innerHTML = '';
         if (images && images.length) {
@@ -574,16 +270,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      buildIndex();
-
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-          buildIndex();
-          const visible = [...document.querySelectorAll('.gallery-item')]
-            .filter(el => el.style.display !== 'none');
-          openLightbox(visible.indexOf(item));
-        });
-      });
+      loadGallery();
 
       document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
       document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
