@@ -22,13 +22,6 @@ function cloudinaryRequest(cloudName, apiKey, apiSecret, path) {
   });
 }
 
-const BANNER_IDS = new Set([
-  'banner1_o61h0v',
-  'schoolawardbanner_tga7ln',
-  'admissionbanner2023_rsnvxt',
-  'excellence_cjgvpg',
-]);
-
 exports.handler = async () => {
   const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
   const apiKey = process.env.CLOUDINARY_API_KEY;
@@ -39,12 +32,9 @@ exports.handler = async () => {
   }
 
   try {
-    const path = `/v1_1/${cloudName}/resources/image?type=upload&max_results=500`;
+    const path = `/v1_1/${cloudName}/resources/image/tags/hero-banner?max_results=20`;
     const data = await cloudinaryRequest(cloudName, apiKey, apiSecret, path);
-    const images = (data.resources || [])
-      .filter(r => BANNER_IDS.has(r.public_id))
-      .map(r => ({ url: r.secure_url, public_id: r.public_id }));
-
+    const images = (data.resources || []).map(r => ({ url: r.secure_url, public_id: r.public_id }));
     return {
       statusCode: 200,
       headers: {
