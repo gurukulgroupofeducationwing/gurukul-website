@@ -492,3 +492,20 @@ body {
 @media (max-width: 600px) {
   .topbar { display: none; }
 }
+
+
+/* ── Footer mobile gap fix ── */
+@media (max-width: 600px) {
+  .footer-grid {
+    gap: 20px !important;
+  }
+  .site-footer ul {
+    gap: 2px !important;
+  }
+  .site-footer h4 {
+    margin-bottom: 6px !important;
+  }
+  .site-footer {
+    padding-top: 32px !important;
+  }
+}
