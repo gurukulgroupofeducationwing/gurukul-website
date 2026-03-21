@@ -7,18 +7,23 @@
 
 @media (max-width: 900px) {
 
-  /* Topbar */
-  .topbar { flex-direction: column; gap: 6px; text-align: center; padding: 8px var(--spacing-sm); }
-  .topbar-left, .topbar-right { flex-wrap: wrap; justify-content: center; gap: 10px; }
+  /* Topbar — show only the bar, hide all content */
+  .topbar { padding: 6px var(--spacing-sm); border-bottom: none; }
+  .topbar-left, .topbar-right { display: none; }
 
-  /* Hero */
+  /* Hero — split top content and bottom buttons */
   .hero { height: 420px; }
-  .hero-overlay { padding: 0 var(--spacing-md); }
+  .hero-overlay { padding: 0 var(--spacing-md); justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
+  .hero-top { display: flex; flex-direction: column; }
   .hero-overlay h1 { font-size: 32px; max-width: 100%; }
   .hero-overlay p { font-size: 14px; }
   .notice-bar { max-width: 100%; }
-  .hero-btns { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .hero-btns { flex-direction: row; gap: 10px; align-items: center; flex-wrap: wrap; }
   .hero-btns .btn { width: fit-content; }
+  .slider-dots { display: none; }
+
+  /* About block photo: landscape, visible down to 393px */
+  .about-block-photo { height: auto; aspect-ratio: 16 / 9; min-height: 220px; }
 
   /* Section padding */
   section { padding: var(--spacing-xl) var(--spacing-sm); }
