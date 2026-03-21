@@ -7,8 +7,8 @@
 
 @media (max-width: 900px) {
 
-  /* Topbar — show only the bar, hide all content */
-  .topbar { padding: 6px var(--spacing-sm); border-bottom: none; }
+  /* Topbar — show only the dark bar, hide all content */
+  .topbar { padding: 0; min-height: 10px; border-bottom: none; }
   .topbar-left, .topbar-right { display: none; }
 
   /* Hero — split top content and bottom buttons */
