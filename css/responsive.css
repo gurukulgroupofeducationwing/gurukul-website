@@ -7,9 +7,9 @@
 
 @media (max-width: 900px) {
 
-  /* Topbar — separator line between topbar and navbar */
-  .topbar { flex-direction: column; gap: 6px; text-align: center; padding: 8px var(--spacing-sm); border-bottom: 2px solid rgba(255,255,255,0.15); }
-  .topbar-left, .topbar-right { flex-wrap: wrap; justify-content: center; gap: 10px; }
+  /* Topbar — show only the bar, hide all content */
+  .topbar { padding: 6px var(--spacing-sm); border-bottom: none; }
+  .topbar-left, .topbar-right { display: none; }
 
   /* Hero — split top content and bottom buttons */
   .hero { height: 420px; }
@@ -20,9 +20,10 @@
   .notice-bar { max-width: 100%; }
   .hero-btns { flex-direction: row; gap: 10px; align-items: center; flex-wrap: wrap; }
   .hero-btns .btn { width: fit-content; }
+  .slider-dots { display: none; }
 
-  /* About block photo: landscape aspect ratio on mobile */
-  .about-block-photo { height: auto; aspect-ratio: 16 / 9; }
+  /* About block photo: landscape, visible down to 393px */
+  .about-block-photo { height: auto; aspect-ratio: 16 / 9; min-height: 220px; }
 
   /* Section padding */
   section { padding: var(--spacing-xl) var(--spacing-sm); }
