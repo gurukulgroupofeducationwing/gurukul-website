@@ -496,3 +496,120 @@
   .achievement-grid { grid-template-columns: 1fr; }
   .admission-steps { grid-template-columns: 1fr; }
 }
+/* ================= FOUNDER PROFILE (ADDED) ================= */
+
+.profile-grid {
+display: grid;
+grid-template-columns: 320px 1fr;
+gap: 48px;
+align-items: start;
+}
+
+/* LEFT CARD */
+.profile-card {
+background: var(--color-white);
+border: 1px solid var(--color-border);
+border-radius: var(--radius-md);
+overflow: hidden;
+text-align: center;
+box-shadow: var(--shadow-sm);
+transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.profile-card:hover {
+box-shadow: var(--shadow-md);
+transform: translateY(-4px);
+}
+
+.profile-card img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+/* Profile Info */
+.profile-info {
+padding: 18px;
+}
+
+.profile-info h3 {
+font-family: var(--font-heading);
+font-size: 18px;
+color: var(--color-heading);
+margin-bottom: 4px;
+}
+
+.profile-info p {
+font-size: 13px;
+font-weight: 600;
+color: var(--color-text);
+}
+
+.profile-info span {
+font-size: 12px;
+color: var(--color-muted);
+}
+
+/* RIGHT CONTENT */
+.profile-content {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.profile-block h4 {
+font-family: var(--font-heading);
+font-size: 16px;
+color: var(--color-heading);
+margin-bottom: 8px;
+border-left: 3px solid var(--color-accent);
+padding-left: 10px;
+}
+
+.profile-block ul {
+padding-left: 18px;
+}
+
+.profile-block li {
+margin-bottom: 6px;
+font-size: 14px;
+color: #444;
+line-height: 1.6;
+}
+
+/* Highlight section */
+.profile-block.highlight {
+background: var(--color-light);
+padding: 16px;
+border-radius: var(--radius-md);
+border: 1px solid var(--color-border);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+.profile-grid {
+grid-template-columns: 1fr;
+gap: 32px;
+}
+
+.profile-card {
+max-width: 260px;
+margin: 0 auto;
+}
+}
+
+@media (max-width: 600px) {
+
+.profile-block h4 {
+font-size: 15px;
+}
+
+.profile-block li {
+font-size: 13px;
+}
+
+.profile-content {
+gap: 18px;
+}
+}
