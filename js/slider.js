@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const res = await fetch('/.netlify/functions/hero');
+    const res = await fetch('/api/hero');
     if (!res.ok) throw new Error('Non-200 response');
     const images = await res.json();
     if (images && images.length) {

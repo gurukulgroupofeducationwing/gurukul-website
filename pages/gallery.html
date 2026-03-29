@@ -204,7 +204,7 @@
     async function loadGallery() {
       const grid = document.getElementById('galleryGrid');
       try {
-        const res = await fetch('/.netlify/functions/gallery');
+        const res = await fetch('/api/gallery');
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const images = await res.json();
         grid.innerHTML = '';
