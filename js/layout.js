@@ -16,8 +16,8 @@ function getNavHTML(base) {
     <div class="nav-logo">
       <a href="${base}index.html">
         <img
-          src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png"
-          alt="Gurukul Group of Education Wing"
+          src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1774781339/logo_gnkodp.png"
+          alt="Gurukul Group of Educationl Wing"
           class="nav-logo-img animate__animated"
           onmouseover="this.classList.add('animate__pulse')"
           onmouseout="this.classList.remove('animate__pulse')"
@@ -25,7 +25,7 @@ function getNavHTML(base) {
       </a>
       <a href="${base}index.html">
         <div class="nav-logo-text">
-          <strong>Gurukul Group of Education Wing</strong>
+          <strong>Gurukul Group of Educationl Wing</strong>
           <span>Affiliated to CBSE &bull; Est. 2017</span>
         </div>
       </a>
@@ -81,8 +81,8 @@ function getFooterHTML(base) {
       <div class="footer-brand">
         <!-- UPDATE: Replace text logo with image when ready:
              <img src="${base}images/logo.png" alt="Gurukul Logo" style="height:60px;margin-bottom:12px;"> -->
-        <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1773926805/logo_daoq6o.png" alt="Gurukul Logo" style="width:100px;height:auto;margin-bottom:4px;filter:brightness(0) invert(1);">
-        <strong>Gurukul Group of Education Wing</strong>
+        <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1774781339/logo_gnkodp.png" alt="Gurukul Logo" style="width:100px;height:auto;margin-bottom:4px;filter:brightness(0) invert(1);">
+        <strong>Gurukul Group of Educationl Wing</strong>
         <p>CBSE Affiliated (No. 230192) | Co-educational<br>
         School Code: 35422<br>
         A flagship project of Durlav Foundation<br>
@@ -122,7 +122,7 @@ function getFooterHTML(base) {
       </div>
     </div>
     <div class="footer-bottom container">
-      <span>Copyright &copy; 2026 Gurukul Group of Education Wing. All rights reserved.</span>
+      <span>Copyright &copy; 2026 Gurukul Group of Educationl Wing. All rights reserved.</span>
     </div>
   </footer>`;
 }
