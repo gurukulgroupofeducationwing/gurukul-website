@@ -33,6 +33,8 @@ export default async function handler(req, res) {
 
   const categories = [
     { tag: 'gallery-annualday', cat: 'annualday', label: 'Annual Day 2022-23' },
+     { tag: 'gallery-annual2026', cat: 'annual2026', label: 'Annual Day 2025-26' },
+  { tag: 'gallery-science', cat: 'science', label: 'Science Exhibition' },
     { tag: 'gallery-events',    cat: 'events',    label: 'Events' },
     { tag: 'gallery-sports',    cat: 'sports',    label: 'Sports' },
     { tag: 'gallery-campus',    cat: 'campus',    label: 'Campus' },
