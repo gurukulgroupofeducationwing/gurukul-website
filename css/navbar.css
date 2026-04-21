@@ -234,3 +234,9 @@ font-size: 8px;
 display: none;
 }
 }
+/* Hide topbar on mobile */
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+}
