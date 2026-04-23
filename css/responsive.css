@@ -20,20 +20,33 @@
 
   /* HERO */
   .hero {
-    height: 360px;
+    min-height: 420px; /* FIX height issue */
+    height: auto;
   }
 
   .hero-overlay {
-    padding: 0 16px;
+    padding: 16px;
+    position: relative;
+    z-index: 2;
   }
 
   .hero-overlay h1 {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.3;
   }
 
-  .hero-overlay p,
+  /* ✅ SHOW CONTENT AGAIN */
+  .hero-overlay p {
+    display: block;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
   .notice-bar {
-    display: none;
+    display: block;
+    font-size: 12px;
+    padding: 6px;
+    margin-top: 10px;
   }
 
   .hero-btns .btn {
@@ -50,6 +63,8 @@
     padding: 0 16px;
   }
 }
+
+/* TOPBAR */
 @media (max-width: 768px) {
   .topbar {
     display: none !important;
