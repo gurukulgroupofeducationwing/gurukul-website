@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const path = `/v1_1/${cloudName}/resources/image?max_results=20`;
+    const path = `/v1_1/${cloudName}/resources/image?max_results=5`;
     const data = await cloudinaryRequest(cloudName, apiKey, apiSecret, path);
     const images = (data.resources || []).map(r => ({
   url: r.secure_url.replace('/upload/', '/upload/f_auto,q_auto/'),
