@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!res.ok) throw new Error('Non-200 response');
     const images = await res.json();
     if (images && images.length) {
-      buildSlider(images);
+       buildSlider(images.slice(0, 5));
     } else {
       fallback();
     }
