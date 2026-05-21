@@ -1,71 +1,72 @@
 :root {
 
 /* ========================================
-BRAND COLORS
+BRAND COLORS - Professional Navy & Gold
 ======================================== */
 
---color-primary: #1e40af;
---color-primary-dark: #1e3a8a;
---color-primary-light: #e0e7ff;
+--color-primary: #1e3a5f;
+--color-primary-dark: #0f2744;
+--color-primary-light: #e8eff5;
 
---color-secondary: #15803d;
---color-secondary-dark: #166534;
---color-secondary-light: #dcfce7;
+--color-secondary: #c9a962;
+--color-secondary-dark: #a88b4a;
+--color-secondary-light: #f9f4e6;
 
---color-tertiary: #f59e0b;
---color-tertiary-dark: #d97706;
---color-tertiary-light: #fff7ed;
+--color-tertiary: #2d5a3d;
+--color-tertiary-dark: #1f402b;
+--color-tertiary-light: #e8f0eb;
 
---color-accent: #0f172a;
---color-accent-dark: #020617;
---color-accent-light: #e2e8f0;
+--color-accent: #1e3a5f;
+--color-accent-dark: #0f2744;
+--color-accent-light: #f0f4f8;
 
 /* ========================================
 BACKGROUND COLORS
 ======================================== */
 
---color-bg: #ffffff;
---color-bg-alt: #f8fafc;
---color-bg-soft: #f1f5f9;
---color-bg-dark: #0f172a;
+--color-bg: #fafbfc;
+--color-bg-alt: #f5f7fa;
+--color-bg-soft: #ffffff;
+--color-bg-dark: #0f2744;
 
 --color-white: #ffffff;
---color-light: #f1f5f9;
---color-light2: #e8f0fe;
---color-surface: #f8fafc;
+--color-light: #f5f7fa;
+--color-light2: #eef2f6;
+--color-surface: #ffffff;
 
 /* ========================================
 TEXT COLORS
 ======================================== */
 
---color-heading: #0f172a;
+--color-heading: #0f2744;
 --color-text: #334155;
 --color-muted: #64748b;
---color-border: #e2e8f0;
+--color-border: #dfe3e8;
 
 /* ========================================
 TYPOGRAPHY
 ======================================== */
 
---font-heading: 'Cormorant Garamond', serif;
---font-body: 'Nunito', sans-serif;
+--font-heading: 'Playfair Display', serif;
+--font-body: 'Inter', sans-serif;
 
 /* ========================================
 BORDER RADIUS
 ======================================== */
 
---radius-sm: 4px;
---radius-md: 10px;
---radius-lg: 18px;
---radius-xl: 28px;
+--radius-sm: 6px;
+--radius-md: 12px;
+--radius-lg: 20px;
+--radius-xl: 32px;
 
 /* ========================================
 SHADOWS
 ======================================== */
 
---shadow-sm: 0 2px 10px rgba(0,0,0,0.05);
---shadow-md: 0 10px 30px rgba(0,0,0,0.08);
---shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+--shadow-sm: 0 1px 3px rgba(15, 39, 68, 0.06);
+--shadow-md: 0 4px 16px rgba(15, 39, 68, 0.08);
+--shadow-lg: 0 12px 40px rgba(15, 39, 68, 0.12);
+--shadow-xl: 0 20px 60px rgba(15, 39, 68, 0.16);
 
 /* ========================================
 TRANSITIONS
@@ -79,11 +80,11 @@ TRANSITIONS
 SPACING SYSTEM
 ======================================== */
 
---spacing-xs: 6px;
---spacing-sm: 12px;
---spacing-md: 20px;
---spacing-lg: 36px;
---spacing-xl: 56px;
---spacing-xxl: 80px;
+--spacing-xs: 8px;
+--spacing-sm: 16px;
+--spacing-md: 24px;
+--spacing-lg: 40px;
+--spacing-xl: 64px;
+--spacing-xxl: 96px;
 
 }
