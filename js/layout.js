@@ -30,7 +30,11 @@ function getNavHTML(base) {
         </div>
       </a>
     </div>
-    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <button class="nav-toggle" id="navToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
     <ul class="nav-links" id="navLinks">
       <li class="has-dropdown">
         <a href="#">About <span class="arrow">&#9662;</span></a>
@@ -122,7 +126,20 @@ function getFooterHTML(base) {
       </div>
     </div>
     <div class="footer-bottom container">
-      <span>Copyright &copy; 2026 Gurukul Group of Educationl Wing. All rights reserved.</span>
+      <span>
+  Copyright &copy; 2026 Gurukul Group of Educational Wing. All rights reserved.
+  <br>
+  Made by 
+  <strong>
+    <a 
+      href="https://www.instagram.com/cleanstrap" 
+      target="_blank"
+      style="color:#fff;text-decoration:none;"
+    >
+      CleanStrap
+    </a>
+  </strong>
+</span>
     </div>
   </footer>`;
 }
