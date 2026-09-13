@@ -86,7 +86,7 @@ function getFooterHTML(base) {
         <!-- UPDATE: Replace text logo with image when ready:
              <img src="${base}images/logo.png" alt="Gurukul Logo" style="height:60px;margin-bottom:12px;"> -->
         <img src="https://res.cloudinary.com/dsfgnnpho/image/upload/v1774781339/logo_gnkodp.png" alt="Gurukul Logo" style="width:100px;height:auto;margin-bottom:4px;filter:brightness(0) invert(1);">
-        <strong>Gurukul Group of Educationl Wing</strong>
+        <strong>Gurukul Group of Educational Wing</strong>
         <p>CBSE Affiliated (No. 230192) | Co-educational<br>
         School Code: 35422<br>
         A flagship project of Durlav Foundation<br>
