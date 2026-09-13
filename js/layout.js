@@ -25,7 +25,7 @@ function getNavHTML(base) {
       </a>
       <a href="${base}index.html">
         <div class="nav-logo-text">
-          <strong>Gurukul Group of Educationl Wing</strong>
+          <strong>Gurukul Group of Educational Wing</strong>
           <span>Affiliated to CBSE &bull; Est. 2017</span>
         </div>
       </a>
